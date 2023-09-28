@@ -58,7 +58,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
 
 }
 .scoreBoard{
@@ -66,7 +66,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 50%;
-    padding: 1.5rem;
+    padding: 1rem;
     border: 3px solid hsl(217, 16%, 45%);
     border-radius: 1rem;
     transition: .5s linear;
@@ -77,7 +77,7 @@ header{
 }
 .score{
     padding: 1rem 1.5rem;
-    background-color: #ddd;
+    background-color: #ffffff;
     text-align: center;
     border-radius: 5px;
 }
@@ -93,9 +93,36 @@ header{
     color: hsl(229, 25%, 31%);
     font-size: 3rem;
 }
+
+.gameBtns{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./assets/bg-triangle.svg);
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: 24rem;
+}
+.btnWrapper{
+    display: flex;
+    gap: 5rem;
+  
+}
+.circle{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-image: radial-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+    box-shadow: 0 8px 0px hsl(230, 79%, 54%);
+    cursor: pointer;
+}
 .paper {
-    width: 10rem;
-    height: 10rem;
+    
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     padding: 2rem;
     background-image: url(./assets/icon-paper.svg);
@@ -103,11 +130,73 @@ header{
     background-repeat: no-repeat;
     background-size: 50%;
     background-color: white;
-    box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.2);}
-.circle{
-    width: fit-content;
+    box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+.scissors {
+    position: relative;
+    top: 50;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     padding: 2rem;
-    background-image: radial-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
-    box-shadow: 0 8px 0px hsl(230, 79%, 54%);
+    background-image: url(./assets/icon-scissors.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-color: white;
+    box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .5s linear;
 }
+.circleScissors{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-image: radial-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+    box-shadow: 0 8px 0px hsl(39, 85%, 33%);
+    cursor: pointer;
+}
+.rock {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    padding: 2rem;
+    background-image: url(./assets/icon-rock.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-color: white;
+    box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .5s linear;
+}
+.circleRock{
+    margin-bottom: 3rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-image: radial-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+    box-shadow: 0 8px 0px hsl(349, 66%, 46%);
+    cursor: pointer;
+}
+.circle:hover{
+    box-shadow: 0 4px 0px hsl(230, 67%, 45%);
+    transform: scale(1.01);
+
+}
+.circleScissors:hover{
+    box-shadow: 0 4px 0px hsl(39, 89%, 49%);
+    transform: scale(1.01);
+
+}
+.circleRock:hover{
+    box-shadow: 0 4px 0px hsl(349, 66%, 46%);
+    transform: scale(1.01);
+
+}
+    
