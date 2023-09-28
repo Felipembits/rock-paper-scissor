@@ -93,7 +93,12 @@ header{
     color: hsl(229, 25%, 31%);
     font-size: 3rem;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    padding-bottom: 1rem;
+}
 .gameBtns{
     
     display: flex;
@@ -118,6 +123,7 @@ header{
     background-image: radial-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
     box-shadow: 0 8px 0px hsl(230, 79%, 54%);
     cursor: pointer;
+    transition: .2s linear;
 }
 .paper {
     
@@ -175,7 +181,6 @@ header{
     transition: .5s linear;
 }
 .circleRock{
-    margin-bottom: 3rem;
     width: fit-content;
     height: fit-content;
     border-radius: 50%;
@@ -183,6 +188,8 @@ header{
     background-image: radial-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
     box-shadow: 0 8px 0px hsl(349, 66%, 46%);
     cursor: pointer;
+    transition: .2s linear;
+
 }
 .circle:hover{
     box-shadow: 0 4px 0px hsl(230, 67%, 45%);
@@ -200,3 +207,20 @@ header{
 
 }
     
+.rules{
+    align-self: end;
+    letter-spacing: .2rem;
+    padding: .5rem 2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+}
+.rules:hover{
+    background-color: white;
+    color: hsl(229, 25%, 31%);
+    transition: .5s linear;
+    cursor: pointer;
+}
