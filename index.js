@@ -1,6 +1,7 @@
 const openDialogButton = document.getElementById('openDialogButton');
 const gameDialog = document.getElementById('rulesDialog');
 const scoreNumber = document.getElementById('scoreNumber');
+
 openDialogButton.addEventListener('click', () => {
     gameDialog.showModal();
 });
@@ -149,6 +150,7 @@ function createGameButtons() {
         btnWrapper.removeChild(paperCircle);
         btnWrapper.appendChild(playerPicked);
         gameButtonsResults.appendChild(btnWrapper);
+
         if (random == 0) {
             const result = document.createElement('div');
             result.classList.add('result');
@@ -192,6 +194,7 @@ function createGameButtons() {
         playerPicked.appendChild(rockCircle);
         btnWrapper.appendChild(playerPicked);
         gameButtonsResults.appendChild(btnWrapper);
+        
         if (random == 0) {
             const result = document.createElement('div');
             result.classList.add('result');
@@ -208,6 +211,7 @@ function createGameButtons() {
             btnWrapper.appendChild(housePicked);
             housePicked.appendChild(paperCircle);;
         }
+        
         if (random == 1) {
             const result = document.createElement('div');
             result.classList.add('result');
@@ -228,6 +232,7 @@ function createGameButtons() {
        
     }
     playAgain.addEventListener('click', () => {
+        
         gameButtonsResults.removeChild(btnWrapper);
         while (btnWrapper.firstChild) {
             btnWrapper.removeChild(btnWrapper.firstChild);
