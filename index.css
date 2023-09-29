@@ -400,9 +400,9 @@ main{
         margin-bottom: 5rem;
     }
     .rules{
-        margin: 0;
-        position: fixed;
+        margin: 3rem 0rem;
         align-self: center;
+        position: relative;
     }
   
 }
