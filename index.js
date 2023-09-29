@@ -104,7 +104,7 @@ function createGameButtons() {
         btnWrapper.removeChild(paperCircle);
 
         playerPicked.appendChild(paperCircle);
-        gameButtonsResults.appendChild(playerPicked);
+        btnWrapper.appendChild(playerPicked);
         gameButtonsResults.appendChild(btnWrapper);
 
         if (random == 0) {
@@ -132,7 +132,8 @@ function createGameButtons() {
             result.appendChild(win);
             result.appendChild(playAgain);
             btnWrapper.appendChild(result);
-            btnWrapper.appendChild(rockCircle);
+            btnWrapper.appendChild(housePicked);
+            housePicked.appendChild(rockCircle);
 
             const currentScore = parseInt(scoreNumber.innerText, 10);
             scoreNumber.innerText = (currentScore + 1).toString();
@@ -146,7 +147,7 @@ function createGameButtons() {
         }
         playerPicked.appendChild(scissorsCircle);
         btnWrapper.removeChild(paperCircle);
-        gameButtonsResults.appendChild(playerPicked);
+        btnWrapper.appendChild(playerPicked);
         gameButtonsResults.appendChild(btnWrapper);
         if (random == 0) {
             const result = document.createElement('div');
@@ -159,7 +160,8 @@ function createGameButtons() {
             result.appendChild(win);
             result.appendChild(playAgain);
             btnWrapper.appendChild(result);
-            btnWrapper.appendChild(paperCircle);
+            btnWrapper.appendChild(housePicked);
+            housePicked.appendChild(paperCircle);
             const currentScore = parseInt(scoreNumber.innerText, 10);
             scoreNumber.innerText = (currentScore + 1).toString();
         }
@@ -175,7 +177,8 @@ function createGameButtons() {
             result.appendChild(playAgain);
             btnWrapper.appendChild(result);
 
-            btnWrapper.appendChild(rockCircle);
+            btnWrapper.appendChild(housePicked);
+            housePicked.appendChild(rockCircle);
         }
        
     }
@@ -187,7 +190,7 @@ function createGameButtons() {
         btnWrapper.removeChild(paperCircle);
         btnWrapper.removeChild(scissorsCircle);
         playerPicked.appendChild(rockCircle);
-        gameButtonsResults.appendChild(playerPicked);
+        btnWrapper.appendChild(playerPicked);
         gameButtonsResults.appendChild(btnWrapper);
         if (random == 0) {
             const result = document.createElement('div');
@@ -202,7 +205,8 @@ function createGameButtons() {
             result.appendChild(playAgain);
             btnWrapper.appendChild(result);
 
-            btnWrapper.appendChild(paperCircle);
+            btnWrapper.appendChild(housePicked);
+            housePicked.appendChild(paperCircle);;
         }
         if (random == 1) {
             const result = document.createElement('div');
@@ -216,7 +220,8 @@ function createGameButtons() {
             result.appendChild(win);
             result.appendChild(playAgain);
             btnWrapper.appendChild(result);
-            btnWrapper.appendChild(scissorsCircle);
+            btnWrapper.appendChild(housePicked);
+            housePicked.appendChild(scissorsCircle);
             const currentScore = parseInt(scoreNumber.innerText, 10);
             scoreNumber.innerText = (currentScore + 1).toString();
         }
@@ -227,7 +232,6 @@ function createGameButtons() {
         while (btnWrapper.firstChild) {
             btnWrapper.removeChild(btnWrapper.firstChild);
         }
-        gameButtonsResults.removeChild(playerPicked);
 
         btnWrapper.appendChild(paperCircle);
         btnWrapper.appendChild(scissorsCircle);

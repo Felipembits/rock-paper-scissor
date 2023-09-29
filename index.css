@@ -61,6 +61,7 @@ header{
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
+    animation: smoothGrowing2 .65s linear;
 
 }
 .scoreBoard{
@@ -71,7 +72,7 @@ header{
     padding: 1rem;
     border: 3px solid hsl(217, 16%, 45%);
     border-radius: 1rem;
-    transition: .5s linear;
+    transition: .65s linear;
 }
 .pageTitle{
    font-weight: 600; 
@@ -100,6 +101,7 @@ main{
     flex-direction: column;
     padding: 1rem;
     padding-bottom: 1rem;
+
 }
 .gameBtns{
     
@@ -111,6 +113,8 @@ main{
     background-position: 50% 60%;
     background-repeat: no-repeat;
     background-size: 24rem;
+    animation: smoothGrowing2 .65s linear;
+
 }
 .gameBtnsResults{
     
@@ -146,7 +150,8 @@ main{
     display: flex;
     gap: 5rem;
     justify-content: center;
-  
+    animation: smoothGrowing2 .65s linear;
+
 }
 .circle{
     width: fit-content;
@@ -172,7 +177,6 @@ main{
     background-color: white;
     box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: .5s linear;
 }
 
 .scissors {
@@ -187,7 +191,6 @@ main{
     background-color: white;
     box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: .5s linear;
 }
 .circleScissors{
     width: fit-content;
@@ -197,6 +200,8 @@ main{
     background-image: radial-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
     box-shadow: 0 4px 0px hsl(39, 85%, 33%);
     cursor: pointer;
+    transition: .2s linear;
+
 }
 .rock {
     width: 8rem;
@@ -219,23 +224,25 @@ main{
     background-image: radial-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
     box-shadow: 0 4px 0px hsl(349, 66%, 46%);
     cursor: pointer;
-    transition: .2s linear;
+    animation: smoothGrowing2 .5s linear;
+
 
 }
 .circle:hover{
     box-shadow: 0 2px 0px hsl(230, 67%, 45%);
-    transform: scale(1.01);
+    transform: scale(1.1);
+
 
 }
 
 .circleScissors:hover{
     box-shadow: 0 2px 0px hsl(39, 90%, 42%);
-    transform: scale(1.01);
+    transform: scale(1.1);
 
 }
 .circleRock:hover {
     box-shadow: 0 2px 0px hsl(349, 66%, 46%);
-    transform: scale(1.01);
+    transform: scale(1.1);
 
 }
     
@@ -256,7 +263,7 @@ main{
 .rules:hover{
     background-color: white;
     color: hsl(229, 25%, 31%);
-    transition: .5s linear;
+    transition: .65s linear;
     cursor: pointer;
 }
 #rulesDialog{
@@ -302,6 +309,8 @@ main{
     font-weight: 700;
     gap: 1rem;
     font-size: 3rem;
+
+
 }
 .result button{
     color: hsl(214, 47%, 23%);
@@ -325,7 +334,8 @@ main{
     gap: 1rem;
     font-weight: 600;
     font-size: .8rem;
-    margin-right: 5rem;
+
+    
 }
 .housePicked{
         display: flex;
@@ -336,4 +346,36 @@ main{
         font-weight: 600;
         font-size: .8rem;
         margin-right: 5rem;
+        
+}
+
+@keyframes smoothGrowing2 {
+    0%
+    {
+      opacity: 0%;  
+    }
+    50%
+    {
+      opacity: 50%;  
+    }
+    100%
+    {
+      opacity: 100%;  
+    }
+}
+
+
+@keyframes smoothGrowing {
+    0%
+    {
+      transform: scale(0);  
+    }
+    50%
+    {
+      transform: scale(0.5);  
+    }
+    100%
+    {
+      transform: scale(1);  
+    }
 }
