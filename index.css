@@ -420,6 +420,12 @@ main{
         width: 100%;
     }
     .circle, .circleScissors, .circleRock{
-        padding: 1rem;
+        padding: .5rem;
+    }
+    .rulesContainer{
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    .rulesContainer > img{
+        max-width: 200px;
     }
 }
