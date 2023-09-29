@@ -53,6 +53,8 @@ body{
     min-height: 100vh;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 header{
     display: flex;
@@ -96,7 +98,7 @@ header{
 main{
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    padding: 1rem;
     padding-bottom: 1rem;
 }
 .gameBtns{
@@ -110,9 +112,40 @@ main{
     background-repeat: no-repeat;
     background-size: 24rem;
 }
+.gameBtnsResults{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: 24rem;
+}
+.gameBtnsResults .circle{
+    padding: 2rem;
+}
+.gameBtnsResults .circle .paper{
+    width: 12rem;
+    height: 12rem;
+}
+.gameBtnsResults .circleScissors{
+    padding: 2rem;
+}
+.gameBtnsResults .circleScissors .scissors{
+    width: 12rem;
+    height: 12rem;
+}
+.gameBtnsResults .circleRock{
+    padding: 2rem;
+}
+.gameBtnsResults .circleRock .rock{
+    width: 12rem;
+    height: 12rem;
+}
 .btnWrapper{
     display: flex;
     gap: 5rem;
+    justify-content: center;
   
 }
 .circle{
@@ -121,14 +154,15 @@ main{
     border-radius: 50%;
     padding: 1.5rem;
     background-image: radial-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
-    box-shadow: 0 8px 0px hsl(230, 79%, 54%);
+    box-shadow: 0 4px 0px hsl(230, 79%, 54%);
     cursor: pointer;
     transition: .2s linear;
 }
+
 .paper {
     
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     padding: 2rem;
     background-image: url(./assets/icon-paper.svg);
@@ -142,10 +176,8 @@ main{
 }
 
 .scissors {
-    position: relative;
-    top: 50;
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     padding: 2rem;
     background-image: url(./assets/icon-scissors.svg);
@@ -163,12 +195,12 @@ main{
     border-radius: 50%;
     padding: 1.5rem;
     background-image: radial-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
-    box-shadow: 0 8px 0px hsl(39, 85%, 33%);
+    box-shadow: 0 4px 0px hsl(39, 85%, 33%);
     cursor: pointer;
 }
 .rock {
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     padding: 2rem;
     background-image: url(./assets/icon-rock.svg);
@@ -178,7 +210,6 @@ main{
     background-color: white;
     box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: .5s linear;
 }
 .circleRock{
     width: fit-content;
@@ -186,23 +217,24 @@ main{
     border-radius: 50%;
     padding: 1.5rem;
     background-image: radial-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
-    box-shadow: 0 8px 0px hsl(349, 66%, 46%);
+    box-shadow: 0 4px 0px hsl(349, 66%, 46%);
     cursor: pointer;
     transition: .2s linear;
 
 }
 .circle:hover{
-    box-shadow: 0 4px 0px hsl(230, 67%, 45%);
+    box-shadow: 0 2px 0px hsl(230, 67%, 45%);
     transform: scale(1.01);
 
 }
+
 .circleScissors:hover{
-    box-shadow: 0 4px 0px hsl(39, 89%, 49%);
+    box-shadow: 0 2px 0px hsl(39, 90%, 42%);
     transform: scale(1.01);
 
 }
-.circleRock:hover{
-    box-shadow: 0 4px 0px hsl(349, 66%, 46%);
+.circleRock:hover {
+    box-shadow: 0 2px 0px hsl(349, 66%, 46%);
     transform: scale(1.01);
 
 }
@@ -217,10 +249,91 @@ main{
     font-size: 14px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: white;
+    margin-right: 3rem;
+    position: absolute;
+    bottom: 10%;
 }
 .rules:hover{
     background-color: white;
     color: hsl(229, 25%, 31%);
     transition: .5s linear;
     cursor: pointer;
+}
+#rulesDialog{
+    border: none;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    
+}
+.headerDialog{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(229, 25%, 31%);
+}
+.headerDialog h1{
+    font-size: 2.5rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+}
+#closeDialog{
+    height: 32px;
+    width: 32px;
+}
+#closeDialog:hover{
+   
+    cursor: pointer;
+    transition: .2s;
+    transform: scale(1.1);
+    flex: none;
+}
+.rulesContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5rem 1rem 5rem;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    gap: 1rem;
+    font-size: 3rem;
+}
+.result button{
+    color: hsl(214, 47%, 23%);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;    
+    padding: 1rem 4rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    transition: linear .2s;
+}
+.result button:hover{
+    color: red;
+}
+.playerPicked{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: .8rem;
+    margin-right: 5rem;
+}
+.housePicked{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        gap: 1rem;
+        font-weight: 600;
+        font-size: .8rem;
+        margin-right: 5rem;
 }

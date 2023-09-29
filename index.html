@@ -16,26 +16,26 @@
                 
                 <div class="score">
                     <h3 class="scoreTitle">SCORE</h3>
-                    <h2 class="scoreNumber">0</h2>
+                    <h2 class="scoreNumber" id="scoreNumber">0</h2>
                 </div>
             </div>
         </header>
-        <main>
+        <main class="gameArea">
             <section class="gameBtns">
                 <div class="btnWrapper">
-                    <div class="circle">
-                        <div class="paper"></div>
-                    </div>
-                    <div class="circle circleScissors">
-                        <div class="scissors"></div>
-                    </div>
-                   
-                </div>
-                <div class="circleRock">
-                    <div class="rock"></div>
                 </div>
             </section>
-            <button class="rules">RULES</button>
         </main>
+        <button class="rules" id="openDialogButton">RULES</button>
+        <dialog id="rulesDialog">
+            <div class="headerDialog">
+                <h1>RULES</h1>
+                <img src="./assets/icon-close.svg" alt="" id="closeDialog">
+            </div>
+            <div class='rulesContainer'>
+            <img src="./assets/image-rules.svg" alt="">
+            </div>
+        </dialog>
+        <script src="index.js"></script>
 </body>
 </html>
