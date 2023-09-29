@@ -125,26 +125,31 @@ main{
     background-repeat: no-repeat;
     background-size: 24rem;
 }
+.gameBtnsResults > .btnWrapper{
+    gap: 2rem;
+    margin-top: 6rem;
+
+}
 .gameBtnsResults .circle{
-    padding: 2rem;
+    padding: 1.5rem;
 }
 .gameBtnsResults .circle .paper{
-    width: 12rem;
-    height: 12rem;
+    width: 9rem;
+    height: 9rem;
 }
 .gameBtnsResults .circleScissors{
-    padding: 2rem;
+    padding: 1.5rem;
 }
 .gameBtnsResults .circleScissors .scissors{
-    width: 12rem;
-    height: 12rem;
+    width: 9rem;
+    height: 9rem;
 }
 .gameBtnsResults .circleRock{
-    padding: 2rem;
+    padding: 1.5rem;
 }
 .gameBtnsResults .circleRock .rock{
-    width: 12rem;
-    height: 12rem;
+    width: 9rem;
+    height: 9rem;
 }
 .btnWrapper{
     display: flex;
@@ -224,6 +229,7 @@ main{
     background-image: radial-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
     box-shadow: 0 4px 0px hsl(349, 66%, 46%);
     cursor: pointer;
+    transition: .2s;
     animation: smoothGrowing2 .5s linear;
 
 
@@ -318,7 +324,7 @@ main{
     border: none;
     border-radius: 10px;
     font-weight: 600;    
-    padding: 1rem 4rem;
+    padding: 1rem 3rem;
     letter-spacing: .1rem;
     cursor: pointer;
     transition: linear .2s;
@@ -345,7 +351,6 @@ main{
         gap: 1rem;
         font-weight: 600;
         font-size: .8rem;
-        margin-right: 5rem;
         
 }
 
@@ -377,5 +382,44 @@ main{
     100%
     {
       transform: scale(1);  
+    }
+}
+@media (max-width: 1000px) {
+    .gameBtnsResults .circle .paper, .gameBtnsResults .circleRock .rock, .gameBtnsResults .circleScissors .scissors{
+        width: 3rem;
+        height: 3rem;
+    }
+    .gameBtnsResults .circle , .gameBtnsResults .circleRock , .gameBtnsResults .circleScissors{
+        padding: 1rem;
+    }
+    .gameBtnsResults > .btnWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .scoreBoard{
+        margin-bottom: 5rem;
+    }
+    .rules{
+        margin: 0;
+        position: fixed;
+        align-self: center;
+    }
+  
+}
+@media (max-width: 800px){
+    .gameBtns{
+        background-size: 15rem;
+    }
+    .paper, .scissors, .rock {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    
+    .scoreBoard{
+        width: 100%;
+    }
+    .circle, .circleScissors, .circleRock{
+        padding: 1rem;
     }
 }
